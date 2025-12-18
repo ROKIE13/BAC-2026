@@ -107,9 +107,10 @@ def inserer_cle(arbre, k):
         return arbre
     else:
         if arbre.racine < k:
-            return inserer_cle(arbre.gauche, k)
+            inserer_cle(arbre.gauche, k)
         else:
-            return inserer_cle(arbre.droite, k)
+            inserer_cle(arbre.droite, k)
+        return arbre
 
 
         
