@@ -102,15 +102,22 @@ def recherche_cle(arbre, k):
         return recherche_cle(arbre.droite, k)
 
 def inserer_cle(arbre, k):
-    if arbre is None:
-        arbre = ArbreBinaire(k, None, None)
-        return arbre
-    else:
-        if arbre.racine < k:
-            inserer_cle(arbre.gauche, k)
+    if arbre.est_feuille():
+        if k < arbre.racine:
+            arbre.gauche = ArbreBinaire(k, None, None)
         else:
-            inserer_cle(arbre.droite, k)
-        return arbre
+            arbre.droite = ArbreBinaire(k, None, None)
+    else:
+        if arbre.racine > k:
+            if arbre.gauche is None:
+                arbre.gauche = ArbreBinaire(k, None, None)
+            else:
+                inserer_cle(arbre.gauche, k)
+        else:
+            if arbre.droite is None:
+                arbre.droite = ArbreBinaire(k, None, None)
+            else:
+                inserer_cle(arbre.droite, k)
 
 
         
