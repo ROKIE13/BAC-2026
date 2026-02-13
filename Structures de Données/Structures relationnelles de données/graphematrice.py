@@ -1,0 +1,5 @@
+Graphe = [[False, True, True, True, False, False, False], [True, False, False, False, True, True , True], [True, False, False, False, False, False, False], [True, False, False, False, False, False, True], [False, True, False, False, False, True, False], [False, True, False, False, True, False, False], [False, True, False, True, False, False, False]]
+Graphe2 = [[False, False, True, True, False, False, False], [True, False, False, False, False, True , True], [True, False, False, False, False, False, False], [False, False, False, False, False, False, True], [False, True, False, False, False, True, False], [False, False, False, False, True, False, False], [False, True, False, True, False, False, False]]
+GrapheDic = {'A' : ['B', 'C', 'D'], 'B' : ['A', 'E', 'F', 'G'], 'C' : ['A'], 'D' : ['A', 'G'], 'E' : ['B', 'F'], 'F' : ['B', 'E'], 'G' : ['B', 'D']}
+matrice = 9
+print([matrice*[]])
